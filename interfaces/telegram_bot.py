@@ -103,15 +103,15 @@ async def status(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def agents(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Handle /agents command"""
-    text = "📋 **Доступные агенты:**\n\n"
+    text = "📋 Доступные агенты:\n\n"
     
     for key, info in ASSISTANTS.items():
         role_emoji = "👑" if info["role"] == "coordinator" else "🔧"
-        text += f"{role_emoji} `{key}`\n"
+        text += f"{role_emoji} {key}\n"
         text += f"   {info['description']}\n\n"
     
-    text += "\nИспользуй: /ask <agent_key> <сообщение>"
-    await update.message.reply_text(text, parse_mode="Markdown")
+    text += "Используй: /ask <agent_key> <сообщение>"
+    await update.message.reply_text(text)
 
 
 async def ask_agent(update: Update, context: ContextTypes.DEFAULT_TYPE):
