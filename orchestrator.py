@@ -137,6 +137,66 @@ class Orchestrator:
                     "tool_call_id": tool_call.id,
                     "output": json.dumps(result)
                 })
+            # Database functions
+            elif function_name == "create_custom_table":
+                from functions.database_functions import create_custom_table
+                result = create_custom_table(
+                    arguments.get("table_name"),
+                    arguments.get("columns", [])
+                )
+                tool_outputs.append({
+                    "tool_call_id": tool_call.id,
+                    "output": json.dumps(result)
+                })
+            elif function_name == "list_custom_tables":
+                from functions.database_functions import list_custom_tables
+                result = list_custom_tables()
+                tool_outputs.append({
+                    "tool_call_id": tool_call.id,
+                    "output": json.dumps(result)
+                })
+            elif function_name == "insert_row":
+                from functions.database_functions import insert_row
+                result = insert_row(
+                    arguments.get("table_name"),
+                    arguments.get("data", {})
+                )
+                tool_outputs.append({
+                    "tool_call_id": tool_call.id,
+                    "output": json.dumps(result)
+                })
+            elif function_name == "get_rows":
+                from functions.database_functions import get_rows
+                result = get_rows(
+                    arguments.get("table_name"),
+                    arguments.get("filters"),
+                    arguments.get("limit", 100)
+                )
+                tool_outputs.append({
+                    "tool_call_id": tool_call.id,
+                    "output": json.dumps(result)
+                })
+            elif function_name == "update_row":
+                from functions.database_functions import update_row
+                result = update_row(
+                    arguments.get("table_name"),
+                    arguments.get("row_id"),
+                    arguments.get("data", {})
+                )
+                tool_outputs.append({
+                    "tool_call_id": tool_call.id,
+                    "output": json.dumps(result)
+                })
+            elif function_name == "delete_row":
+                from functions.database_functions import delete_row
+                result = delete_row(
+                    arguments.get("table_name"),
+                    arguments.get("row_id")
+                )
+                tool_outputs.append({
+                    "tool_call_id": tool_call.id,
+                    "output": json.dumps(result)
+                })
             else:
                 # Default: return empty result
                 tool_outputs.append({
