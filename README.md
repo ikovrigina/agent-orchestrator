@@ -193,3 +193,6 @@ Add new functions in `functions/` and register them in the assistant's tool conf
 ---
 
 Built with ❤️ for parallel creative work
+
+---
+Last updated: December 10, 2025
