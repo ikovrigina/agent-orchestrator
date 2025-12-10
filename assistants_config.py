@@ -12,7 +12,7 @@ ASSISTANTS = {
         "description": "Главный координатор, распределяет задачи между агентами"
     },
     "deep_listening": {
-        "id": "asst_8KgaIluAcNi8H6KtPr7VWes1",
+        "id": "asst_8KgaIIuAcNi8H6KtPr7VWes1",
         "name": "pm-deep-listening",
         "role": "specialist",
         "description": "Deep Listening проекты и практики"
@@ -36,7 +36,7 @@ ASSISTANTS = {
         "description": "Billboards SF и эксперименты"
     },
     "digital_presence": {
-        "id": "asst_6Y5LPMYw9guLDgOB7lYr3B4O",
+        "id": "asst_6Y5LPMYw9guLDgOB7IYr3B4O",
         "name": "pm-digital-presence",
         "role": "specialist",
         "description": "Сайт, соцсети, онлайн присутствие"
