@@ -1,0 +1,115 @@
+projects:
+  lscr:
+    name: "LSCR - Deep Listening App"
+    type: "technical"
+    status: "almost_ready"
+    priority: "high"
+    description: "Telegram mini-app for Deep Listening practices"
+    repository: "Cursor/mini-app-LSCR"
+    technologies:
+      - JavaScript
+      - Supabase
+      - Telegram Mini App
+    current_focus: "Marketing and user acquisition"
+    next_steps:
+      - "Create marketing materials"
+      - "Plan social media campaign"
+      - "Reach out to DL community"
+
+  berghain_film:
+    name: "Berghain Documentary - Not Today"
+    type: "creative"
+    status: "in_production"
+    priority: "high"
+    description: "Documentary film about Berghain club culture"
+    current_focus: "Editing and post-production"
+    next_steps:
+      - "Edit scene 3"
+      - "Find background music"
+      - "Create trailer for social media"
+      - "Plan distribution strategy"
+
+  tuning_meditation:
+    name: "Tuning Meditation for GPTs"
+    type: "installation"
+    status: "concept"
+    priority: "medium"
+    description: "Interactive installation/performance exploring AI consciousness"
+    current_focus: "Concept development"
+    next_steps:
+      - "Write detailed concept document"
+      - "Research technical requirements"
+      - "Find exhibition venues"
+      - "Create prototype interaction"
+
+  dl_course:
+    name: "Deep Listening Mini Course"
+    type: "educational"
+    status: "planning"
+    priority: "medium"
+    description: "Beautiful online course about Deep Listening practices"
+    current_focus: "Curriculum structure"
+    next_steps:
+      - "Outline course structure"
+      - "Write lesson 1"
+      - "Design course visuals"
+      - "Choose platform (Notion/Website)"
+
+  website:
+    name: "Personal Website"
+    type: "technical"
+    status: "not_started"
+    priority: "medium"
+    description: "Portfolio and online presence"
+    current_focus: "Design and concept"
+    next_steps:
+      - "Choose design direction"
+      - "List all projects to showcase"
+      - "Write bio and about section"
+      - "Select technology stack"
+
+  social_media:
+    name: "Deep Listening Social Media"
+    type: "content"
+    status: "active"
+    priority: "high"
+    description: "Instagram and Telegram channels about Deep Listening"
+    platforms:
+      - Instagram
+      - Telegram
+    current_focus: "Regular content creation"
+    next_steps:
+      - "Create content calendar"
+      - "Write 3 posts for this week"
+      - "Engage with DL community"
+      - "Cross-promote LSCR app"
+
+  billboards_sf:
+    name: "Billboards SF"
+    type: "creative_tech"
+    status: "concept"
+    priority: "low"
+    description: "AR project or Instagram page featuring SF billboards"
+    current_focus: "Concept exploration"
+    next_steps:
+      - "Decide: AR app vs IG page"
+      - "Research SF billboard locations"
+      - "Create mood board"
+      - "Test AR frameworks if going that route"
+
+# Global priorities
+focus_this_week:
+  - "LSCR marketing push"
+  - "Berghain film editing"
+  - "Social media content"
+
+# Time allocation (suggested)
+time_allocation:
+  berghain_film: 30%
+  lscr: 25%
+  social_media: 20%
+  dl_course: 15%
+  other: 10%
+
+
+

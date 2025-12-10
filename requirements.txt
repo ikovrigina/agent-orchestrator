@@ -1,0 +1,27 @@
+# Core
+openai>=1.12.0
+python-dotenv>=1.0.0
+
+# Database
+supabase>=2.3.0
+
+# Telegram (optional)
+python-telegram-bot>=20.7
+
+# Web server (for Railway)
+fastapi>=0.109.0
+uvicorn>=0.27.0
+
+# Utilities
+pyyaml>=6.0
+requests>=2.31.0
+pytz>=2024.1
+
+# Scheduling
+apscheduler>=3.10.4
+
+# Logging
+loguru>=0.7.2
+
+
+
