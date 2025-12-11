@@ -68,9 +68,25 @@ class Orchestrator:
             raise ValueError(f"Unknown agent: {agent_key}")
         return ASSISTANTS[agent_key]["id"]
     
+    def _wait_for_active_runs(self, thread_id: str):
+        """Wait for any active runs to complete before starting a new one"""
+        while True:
+            runs = self.client.beta.threads.runs.list(thread_id=thread_id, limit=1)
+            if not runs.data:
+                break
+            latest_run = runs.data[0]
+            if latest_run.status in ["queued", "in_progress", "requires_action"]:
+                logger.info(f"Waiting for active run {latest_run.id} to complete...")
+                time.sleep(1)
+            else:
+                break
+    
     def _run_assistant(self, thread_id: str, assistant_id: str, 
                        additional_instructions: Optional[str] = None) -> str:
         """Run an assistant on a thread and wait for completion"""
+        # Wait for any active runs first
+        self._wait_for_active_runs(thread_id)
+        
         run_params = {
             "thread_id": thread_id,
             "assistant_id": assistant_id
@@ -261,7 +277,8 @@ class Orchestrator:
         if context:
             full_message = f"Context: {context}\n\nRequest: {message}"
         
-        # Add message to thread
+        # Wait for any active runs and add message to thread
+        self._wait_for_active_runs(thread_id)
         self.client.beta.threads.messages.create(
             thread_id=thread_id,
             role="user",
@@ -290,7 +307,8 @@ class Orchestrator:
         thread_id = self._get_or_create_thread(specialist_key)
         assistant_id = self._get_assistant_id(specialist_key)
         
-        # Add message to thread
+        # Wait for any active runs and add message to thread
+        self._wait_for_active_runs(thread_id)
         self.client.beta.threads.messages.create(
             thread_id=thread_id,
             role="user",
