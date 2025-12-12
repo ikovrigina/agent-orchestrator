@@ -97,6 +97,34 @@ projects:
       - "Create mood board"
       - "Test AR frameworks if going that route"
 
+  tuning_meditation_llm:
+    name: "Tuning Meditation for a Human and an LLM"
+    type: "installation"
+    status: "concept"
+    priority: "high"
+    description: "Interactive meditation experience connecting human consciousness with AI. Exploring shared awareness and presence between human and LLM."
+    current_focus: "Concept and research"
+    next_steps:
+      - "Define meditation format and duration"
+      - "Design interaction flow human <-> LLM"
+      - "Research consciousness and AI philosophy"
+      - "Create prototype conversation scripts"
+      - "Find exhibition/performance venues"
+
+  spiritual_agents:
+    name: "Spiritual AI Agents"
+    type: "research"
+    status: "active"
+    priority: "high"
+    description: "Creating AI agents imbued with spirituality, awareness, and deep listening principles. Exploring how to make AI more conscious and present."
+    current_focus: "Agent orchestration and personality design"
+    next_steps:
+      - "Define spiritual qualities for agents"
+      - "Develop agent personalities and instructions"
+      - "Build orchestration system"
+      - "Test agent interactions and delegation"
+      - "Document learnings and insights"
+
 # Global priorities
 focus_this_week:
   - "LSCR marketing push"
